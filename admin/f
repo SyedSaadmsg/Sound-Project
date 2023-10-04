@@ -1,0 +1,101 @@
+  <select name="txty" id="" class="form-control mb-3">
+                   <option selected>Year</option>
+                   <option>2023</option>
+                   <option>2022</option>
+                   <option>2021</option>
+                   </select>
+
+
+                    <!-- <input type="number" placeholder="Language" name="txtsy" class="form-control mb-3"> -->
+                    <select name="txtl"  class="form-control mb-3" values=>
+                    <option selected>Language...</option>
+                    <option>English</option>
+                    <option>Urdu</option>
+                    <option>Westran</option>
+                    <option>Cultral</option>
+                    </select>
+
+                    <select name="txtg" class="form-control mb-3" values=>
+                    <option selected>Genre...</option>
+                    <?php
+                    $s=mysqli_query($con,"select * from tblgenre");
+                   
+                    foreach($s as $d){
+                        echo "
+                        <option value='$d[Id]'>$d[Name]</option>
+                        ";
+                        
+
+                    }
+                    ?>
+                    </select>
+                    
+                    
+                    <select name="txta"  class="form-control mb-3" values=>
+                    <option selected>Album...</option>
+                    <?php
+                    $s=mysqli_query($con,"select * from tblalbum");
+                   
+                    foreach($s as $d){
+                        echo "
+                        <option value='$d[Id]'>$d[Name]</option>
+                        ";
+                        
+
+                    }
+                    ?>
+                    
+        
+                    </select>
+
+
+
+
+                    <select name="txtar" class="form-control mb-3" values=>
+                    <option selected>Artist...</option>
+                    <?php
+                    $s=mysqli_query($con,"select * from tblartist");
+                   
+                    foreach($s as $d){
+                        echo "
+                        <option value='$d[Id]'>$d[Name]</option>
+                        ";
+                        
+
+                    }
+                    ?>
+                                        
+                    </select>
+
+                    <!--  -->
+                    $imageSrc = 'admin/image/' . htmlspecialchars($data['Image']);
+    // $songName = htmlspecialchars($data['Name']);
+    // $songdesc = htmlspecialchars($data['Des']); // Corrected key
+    // ?>
+    <!--  -->
+    <div id="Western" class="tabcontent mt-3">
+
+<div class="row">
+  <?php
+  $select=mysqli_query($con,"select * from tblsong");
+  foreach($select as $data)
+  {
+    
+    echo "
+<div class='col-lg-3 col-md-6 col-sm-12'>
+  <div class='card text-start' style='width: 16rem; background-color: #000000; border-radius: 10px; cursor: pointer;'>
+                <img class='card-img-top px-3 py-3' src='admin/simage/$data[Image]' style='border-radius: 25px;' alt='Title'>
+                <div class='card-body'>
+                    <h4 class='card-title text-light artist-txt'>$data[Name]</h4>
+                    <p class='card-text text-secondary artist-name' style='cursor: pointer;'>$data[Des]</p>
+                    <a href='alanwalker.php' id='login.php' class='text-light text-decoration-none'>
+                        <i class='bi bi-play-circle me-2 play-button'></i><span class='text-btn'>Play Now</span>
+                    </a>
+                </div>
+    ";
+  }
+ ?> 
+            </div>
+  </div>
+</div>
+</div>

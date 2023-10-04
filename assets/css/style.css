@@ -1,0 +1,536 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Ysabeau+Infant:wght@300&display=swap');
+/* End */
+
+
+body{
+
+    background-color: #000000;
+margin: 0;
+
+overflow-x: hidden !important;
+
+
+}
+
+/* Main Image */
+
+
+/*  */
+
+/* Navbar Css */
+
+
+  
+
+
+.navbar-nav{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+
+.nav-link{
+    color: 
+    #fff9e0;
+    cursor: pointer;
+position: relative;
+font-weight: bold;
+}
+
+.nav-link::before{
+    content: ''; 
+    position: absolute;
+    bottom: -3px; 
+    left: 0;
+    right: 0;
+    height: 2px; 
+    background-color: #f80808; 
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover{
+    color: red;
+}
+
+
+
+.nav-link:focus{
+    color: red;
+}
+
+.nav-link:hover::before{
+
+    transform: scaleX(1); /* Scale the underline to full width */
+}
+
+.Login{
+    color: #fff9e0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    border: none;
+    color: #fff9e0;
+}
+.Register{
+    color: #fff9e0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.Login:hover{
+    color: red;
+    border-bottom: 2px solid red;
+    cursor: pointer;
+}
+
+.Register:hover{
+    color: red;
+ border-bottom: 2px solid red;
+ cursor: pointer;
+}
+
+
+/* end */
+
+
+/* Banner Css */
+
+.banner-col-2{
+    perspective: 1000px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective-origin: center;
+    overflow: hidden;
+}
+
+
+.img-container{
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
+
+}
+
+.banner-img{
+    height: 23rem;
+    transform: translateZ(0);
+}
+
+
+.banner-txt{
+    position: relative;
+    bottom: 1rem;
+color: red;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3rem;
+}
+
+.typed{
+    font-size: 24px;
+}
+
+
+.banner-brand{
+    color: #fff9e0;
+    font-size: 7rem;
+    text-align: center;
+    letter-spacing: 35px;
+    margin-top: 9rem !important;
+    z-index: -999;
+}
+
+
+.btn-exp{
+    color: #fff9e0;
+    font-size: 20px;
+    letter-spacing: 4px;
+    border: 2px solid #eee;
+    border-radius: 0px;
+    width: 16rem;
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    left: 2rem;
+    box-shadow: none !important;
+}
+
+
+.btn-exp:hover{
+    background: linear-gradient(to left, #fff9e0 50%, transparent 50%); 
+    background-size: 200% 100%; 
+    transition: background-position 0.5s; 
+    color: black; 
+    background-position: -100% 0;
+    font-weight: bold;
+
+}
+
+/* Banner End */
+
+
+
+/* Our Story Css */
+
+
+.story{
+    margin-top: 26rem !important;
+}
+
+
+  .story-heading {
+  
+  margin-top: 20rem !important  ;
+    font-family: 'Ubuntu', sans-serif;
+    color: red;
+    font-size: 3rem;
+    font-weight: bold;
+
+
+  }
+  
+  
+  
+  .star-icon {
+    font-size: 20px;
+    color: #000;
+    position: relative;
+    bottom: 7px;
+}
+
+
+ .story-text {
+    margin-top: 4rem !important;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: #eee;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+/* Our Story End 
+
+
+/* Feaatured Hits Css */
+
+
+
+
+.card-bg {
+    border-radius: 10px;
+    width: 16rem;
+
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+
+.btn-style{
+    color: #fff9e0;
+    border: 2spx solid #fff9e0;
+}
+
+.play{
+    font-size: 20px;
+}
+
+
+.Top-text{
+    color: red;
+    font-size: 45px;
+    text-align: 
+    center;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05); 
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
+  @keyframes zoomOut {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.95); 
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
+  .bg-img {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url("./assets/backgroundimg/bg-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: zoomIn 5s infinite alternate;
+  transform-origin: center;
+  height: 120vh;
+ 
+}
+
+  
+  
+  .bg-img::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.5); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; 
+
+  }
+  
+  .container-fluid {
+    position: relative;
+    z-index: 1; 
+  
+  }
+  
+  .container-fluid a, .container-fluid button {
+    pointer-events: auto; 
+  }
+  
+  
+  @media (max-width: 425px) {
+    .bg-img {
+      background-size: contain; 
+    }
+  }
+
+
+  .btn-style{
+    border: 2px solid #eee;
+    border-radius: 0px;
+  }
+
+
+.play-button {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+.text-btn{
+  position: relative;
+  bottom: 3px;
+  font-weight: bold;
+ left: -6px; 
+ font-size: 18px;
+ font-family: 'Ysabeau Infant', sans-serif;
+ cursor: pointer;
+}
+
+.artist-txt{
+  font-family: 'Ysabeau Infant', sans-serif;
+}
+
+.previous{
+left: -10rem;
+}
+
+
+.next{
+  right: -10rem;
+}
+/* Featured Hits Css Ends */
+
+
+/* Artist page css */
+
+
+.back-con{
+    margin-top: 50rem !important;
+}
+
+.back-arrow{
+    font-size: 20px;
+    margin-top: 5rem;
+}
+
+.text-back{
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.artist-play{
+    margin-top: 5rem !important;
+}
+
+.artist-play-img{
+    border-radius: 10px;
+}
+
+
+
+.comments{
+  color: red !important;
+  margin-top: 5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
+.comment-section{
+  background-color: transparent;
+  border-radius: 0px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: #fff9e0;
+}
+
+
+.comment-section:focus{
+  background-color: transparent;
+  border-radius: 0px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.comment-section::placeholder{
+  color: #fff9e0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+.comment-section::placeholder:focus{
+  display: none;
+}
+
+
+
+.comment-btn{
+  color: #fff9e0;
+ 
+background-color: transparent;
+  border: 2px solid #eee;
+  border-radius: 0px;
+  width: 12rem;
+  font-family: 'Ubuntu', sans-serif;
+
+  box-shadow: none !important;
+}
+
+
+
+.comment-btn:focus{
+
+  color: #fff9e0;
+  font-size: 20px;
+background-color: transparent;
+  border: 2px solid #eee;
+  border-radius: 0px;
+  width: 12rem;
+  font-family: 'Ubuntu', sans-serif;
+
+  box-shadow: none !important; 
+}
+
+.comment-btn:hover{
+  background: linear-gradient(to left, #fff9e0 50%, transparent 50%); 
+  background-size: 200% 100%; 
+  transition: background-position 0.5s; 
+  color: black; 
+  background-position: -100% 0;
+  font-weight: bold;
+border: none;
+}
+
+
+
+/* End */
+
+
+/* Audio Tracks Start */
+
+.Audio-head{
+   color: Red;
+   font-size: 45px;
+   text-align: center;
+   font-family: 'Ubuntu', sans-serif;
+   font-weight: bold;
+   position: relative;
+}
+
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  color: red;
+  background-color: transparent;
+  float: left;
+  border-right: 2px solid red !important;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px 12px;
+  transition: 0.3s;
+  font-size: 20px;
+  font-family: 'Ysabeau Infant', sans-serif;
+font-weight: bold;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background: linear-gradient(to left, #fff9e0 50%, transparent 50%); 
+  background-size: 200% 100%; 
+  transition: background-position 0.5s; 
+  color: black; 
+  background-position: -100% 0;
+  font-weight: bold;
+border: none;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+
+
+/* ABout us */
+
+
+
+.about-head{
+  color: #fff9e0;
+  font-size: 45px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  position: relative;
+}
